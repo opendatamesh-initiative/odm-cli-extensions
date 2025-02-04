@@ -7,7 +7,8 @@ import java.util.Map;
 
 public class ImportSchemaOptions {
     private Path rootDescriptorPath;
-    private Map<String, String> commandCliParameters;
+    private Map<String, String> commandCliInputParameters;
+    private Map<String, String> commandCliOutputParameters;
     private OdmCliBaseConfiguration odmCliConfig;
 
     public Path getRootDescriptorPath() {
@@ -18,12 +19,20 @@ public class ImportSchemaOptions {
         this.rootDescriptorPath = rootDescriptorPath;
     }
 
-    public Map<String, String> getCommandCliParameters() {
-        return commandCliParameters;
+    public Map<String, String> getCommandCliInputParameters() {
+        return commandCliInputParameters;
     }
 
-    public void setCommandCliParameters(Map<String, String> commandCliParameters) {
-        this.commandCliParameters = commandCliParameters;
+    public void setCommandCliInputParameters(Map<String, String> commandCliInputParameters) {
+        this.commandCliInputParameters = commandCliInputParameters;
+    }
+
+    public Map<String, String> getCommandCliOutputParameters() {
+        return commandCliOutputParameters;
+    }
+
+    public void setCommandCliOutputParameters(Map<String, String> commandCliOutputParameters) {
+        this.commandCliOutputParameters = commandCliOutputParameters;
     }
 
     public OdmCliBaseConfiguration getOdmCliConfig() {
