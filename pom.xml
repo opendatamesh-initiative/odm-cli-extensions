@@ -48,15 +48,6 @@
 
     <build>
         <finalName>odm-cli-extensions</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>org.opendatamesh.cli.OdmCliApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 
 </project>
