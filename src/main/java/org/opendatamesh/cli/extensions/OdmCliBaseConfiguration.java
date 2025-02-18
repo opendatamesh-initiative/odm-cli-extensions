@@ -15,7 +15,7 @@ public class OdmCliBaseConfiguration {
     /**
      * List of configurations for remote systems access.
      */
-    private List<System> remoteSystemsConfigurations;
+    private List<SystemConfig> systems;
 
     /**
      * Retrieves the CLI configuration settings.
@@ -38,25 +38,25 @@ public class OdmCliBaseConfiguration {
     /**
      * Retrieves the list of remote system access configurations.
      *
-     * @return a list of {@link System} objects representing remote system settings.
+     * @return a list of {@link SystemConfig} objects representing remote system settings.
      */
-    public List<System> getRemoteSystemsConfigurations() {
-        return remoteSystemsConfigurations;
+    public List<SystemConfig> getSystems() {
+        return systems;
     }
 
     /**
      * Sets the list of remote system access configurations.
      *
-     * @param remoteSystemsConfigurations a list of {@link System} objects to be set.
+     * @param systemConfigs a list of {@link SystemConfig} objects to be set.
      */
-    public void setRemoteSystemsConfigurations(List<System> remoteSystemsConfigurations) {
-        this.remoteSystemsConfigurations = remoteSystemsConfigurations;
+    public void setSystems(List<SystemConfig> systemConfigs) {
+        this.systems = systemConfigs;
     }
 
     /**
      * Represents the configuration to access a remote system.
      */
-    public static class System {
+    public static class SystemConfig {
 
         /**
          * The name of the remote system.

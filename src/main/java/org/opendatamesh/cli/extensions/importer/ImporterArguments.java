@@ -1,21 +1,27 @@
-package org.opendatamesh.cli.extensions.importschema;
+package org.opendatamesh.cli.extensions.importer;
 
 import org.opendatamesh.cli.extensions.OdmCliBaseConfiguration;
+import org.opendatamesh.dpds.model.DataProductVersionDPDS;
 
 import java.nio.file.Path;
 import java.util.Map;
 
 /**
- * Represents the arguments required for importing a schema.
+ * Represents the arguments required for an import command extension.
  * This class encapsulates configuration details such as the root descriptor path,
  * command options, and CLI base configuration.
  */
-public class ImportSchemaArguments {
+public class ImporterArguments {
 
     /**
      * The root path of the descriptor file where the schema will be imported.
      */
     private Path rootDescriptorPath;
+
+    /**
+     * The current data product version object.
+     */
+    private DataProductVersionDPDS dataProductVersion;
 
     /**
      * Options provided by the parent command, represented as key-value pairs.
@@ -79,5 +85,13 @@ public class ImportSchemaArguments {
      */
     public void setOdmCliConfig(OdmCliBaseConfiguration odmCliConfig) {
         this.odmCliConfig = odmCliConfig;
+    }
+
+    public DataProductVersionDPDS getDataProductVersion() {
+        return dataProductVersion;
+    }
+
+    public void setDataProductVersion(DataProductVersionDPDS dataProductVersion) {
+        this.dataProductVersion = dataProductVersion;
     }
 }
