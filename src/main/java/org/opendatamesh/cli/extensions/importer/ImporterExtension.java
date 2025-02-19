@@ -3,6 +3,8 @@ package org.opendatamesh.cli.extensions.importer;
 import org.opendatamesh.cli.extensions.Extension;
 import org.opendatamesh.dpds.model.core.EntityDPDS;
 
+import javax.annotation.Nullable;
+
 /**
  * Represents an extension for importing objects inside Open Data Mesh Descriptor elements.
  */
@@ -24,7 +26,7 @@ public interface ImporterExtension<T extends EntityDPDS> extends Extension {
      * @param arguments the arguments specifying the import details. {@link ImporterArguments}
      * @return the imported element as an instance of {@link EntityDPDS}.
      */
-    T importElement(T target, ImporterArguments arguments);
+    T importElement(@Nullable T target, ImporterArguments arguments);
 
     Class<T> getTargetClass();
 
