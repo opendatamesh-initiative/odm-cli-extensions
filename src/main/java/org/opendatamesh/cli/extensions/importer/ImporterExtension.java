@@ -28,6 +28,10 @@ public interface ImporterExtension<T extends EntityDPDS> extends Extension {
      */
     T importElement(@Nullable T target, ImporterArguments arguments);
 
+    /**
+     * Gets the class type of the target entity being imported.
+     *
+     * @return the {@link Class} object representing the target entity type.
+     */
     Class<T> getTargetClass();
-
 }
