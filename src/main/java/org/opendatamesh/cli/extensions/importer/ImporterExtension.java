@@ -1,14 +1,13 @@
 package org.opendatamesh.cli.extensions.importer;
 
 import org.opendatamesh.cli.extensions.Extension;
-import org.opendatamesh.dpds.model.core.EntityDPDS;
 
 import javax.annotation.Nullable;
 
 /**
  * Represents an extension for importing objects inside Open Data Mesh Descriptor elements.
  */
-public interface ImporterExtension<T extends EntityDPDS> extends Extension {
+public interface ImporterExtension<T> extends Extension {
 
     /**
      * Determines if the extension supports the import from a schema source to a Data Product Descriptor element.
@@ -22,9 +21,9 @@ public interface ImporterExtension<T extends EntityDPDS> extends Extension {
     /**
      * Generates a Data Product Descriptor element from a schema source.
      *
-     * @param target       the type of entity being imported, extending {@link EntityDPDS}.
+     * @param target    the type of entity being imported.
      * @param arguments the arguments specifying the import details. {@link ImporterArguments}
-     * @return the imported element as an instance of {@link EntityDPDS}.
+     * @return the imported element.
      */
     T importElement(@Nullable T target, ImporterArguments arguments);
 
