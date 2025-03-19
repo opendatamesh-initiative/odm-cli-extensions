@@ -2,7 +2,6 @@ package org.opendatamesh.cli.extensions.importer;
 
 import org.opendatamesh.cli.extensions.Extension;
 
-import javax.annotation.Nullable;
 
 /**
  * Represents an extension for importing objects inside Open Data Mesh Descriptor elements.
@@ -25,7 +24,7 @@ public interface ImporterExtension<T> extends Extension {
      * @param arguments the arguments specifying the import details. {@link ImporterArguments}
      * @return the imported element.
      */
-    T importElement(@Nullable T target, ImporterArguments arguments);
+    T importElement(T target, ImporterArguments arguments);
 
     /**
      * Gets the class type of the target entity being imported.

@@ -1,7 +1,7 @@
 package org.opendatamesh.cli.extensions.importer;
 
 import org.opendatamesh.cli.extensions.OdmCliBaseConfiguration;
-import org.opendatamesh.dpds.model.DataProductVersionDPDS;
+import org.opendatamesh.dpds.model.DataProductVersion;
 
 import java.nio.file.Path;
 import java.util.Map;
@@ -21,7 +21,7 @@ public class ImporterArguments {
     /**
      * The current data product version object.
      */
-    private DataProductVersionDPDS dataProductVersion;
+    private DataProductVersion dataProductVersion;
 
     /**
      * Options provided by the parent command, represented as key-value pairs.
@@ -87,11 +87,11 @@ public class ImporterArguments {
         this.odmCliConfig = odmCliConfig;
     }
 
-    public DataProductVersionDPDS getDataProductVersion() {
+    public DataProductVersion getDataProductVersion() {
         return dataProductVersion;
     }
 
-    public void setDataProductVersion(DataProductVersionDPDS dataProductVersion) {
+    public void setDataProductVersion(DataProductVersion dataProductVersion) {
         this.dataProductVersion = dataProductVersion;
     }
 }
